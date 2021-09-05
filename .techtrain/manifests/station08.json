@@ -1,0 +1,14 @@
+{
+    "name": "Station 08",
+    "id": 101,
+    "prepare": [],
+    "tests": [
+        {
+            "type": "junit-compat",
+            "command": ".techtrain/manifests/station_test.sh",
+            "args": [
+                8
+            ]
+        }
+    ]
+}

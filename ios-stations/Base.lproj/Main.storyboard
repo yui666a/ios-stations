@@ -11,20 +11,69 @@
         <!--First View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FirstViewController" customModule="ios_stations" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="FirstViewController" customModule="ios_stations" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fVT-mN-Gbb">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseCell" id="hYn-oK-6w7" customClass="BookCell" customModule="ios_stations" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hYn-oK-6w7" id="Qrr-vm-TEd">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Book" translatesAutoresizingMaskIntoConstraints="NO" id="1X1-la-36m">
+                                                    <rect key="frame" x="0.0" y="0.0" width="192" height="100"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuj-IS-9dG">
+                                                    <rect key="frame" x="172" y="14.5" width="70" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あああいいいいいいい" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ig-eM-q7Y">
+                                                    <rect key="frame" x="120.5" y="40" width="173.5" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8Ig-eM-q7Y" firstAttribute="centerX" secondItem="Qrr-vm-TEd" secondAttribute="centerX" id="DGe-mq-yvd"/>
+                                                <constraint firstAttribute="bottom" secondItem="1X1-la-36m" secondAttribute="bottom" id="GBC-yo-I8x"/>
+                                                <constraint firstItem="cuj-IS-9dG" firstAttribute="centerY" secondItem="Qrr-vm-TEd" secondAttribute="centerY" constant="-25" id="U3u-Ou-E8e"/>
+                                                <constraint firstItem="8Ig-eM-q7Y" firstAttribute="centerY" secondItem="Qrr-vm-TEd" secondAttribute="centerY" id="c7B-am-Xvh"/>
+                                                <constraint firstItem="1X1-la-36m" firstAttribute="top" secondItem="Qrr-vm-TEd" secondAttribute="top" id="hcg-Df-GcV"/>
+                                                <constraint firstItem="1X1-la-36m" firstAttribute="leading" secondItem="Qrr-vm-TEd" secondAttribute="leading" id="jG5-In-OmI"/>
+                                                <constraint firstItem="cuj-IS-9dG" firstAttribute="centerX" secondItem="Qrr-vm-TEd" secondAttribute="centerX" id="ney-zV-V9J"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fVT-mN-Gbb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2Em-Ji-6tC"/>
+                            <constraint firstAttribute="bottom" secondItem="fVT-mN-Gbb" secondAttribute="bottom" id="Fak-YW-RCO"/>
+                            <constraint firstItem="fVT-mN-Gbb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Gze-b5-SO4"/>
+                            <constraint firstItem="fVT-mN-Gbb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JTa-ZI-6tJ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="139" y="103"/>
+            <point key="canvasLocation" x="137.68115942028987" y="102.45535714285714"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Book" width="192" height="192"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

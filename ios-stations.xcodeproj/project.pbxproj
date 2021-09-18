@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60211C5226EFBA2A000E664C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 60211C5426EFBA2A000E664C /* InfoPlist.strings */; };
+		607DFCA126F5D7930084C6B1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 607DFCA026F5D7930084C6B1 /* Alamofire */; };
 		BE245141266FBEE00038AD81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE245140266FBEE00038AD81 /* AppDelegate.swift */; };
 		BE245143266FBEE00038AD81 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE245142266FBEE00038AD81 /* SceneDelegate.swift */; };
 		BE245145266FBEE00038AD81 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE245144266FBEE00038AD81 /* FirstViewController.swift */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		60211C5326EFBA2A000E664C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		606C8FA326F17A5300173686 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
 		BE24513D266FBEE00038AD81 /* ios-stations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-stations.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE245140266FBEE00038AD81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE245142266FBEE00038AD81 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +73,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE7131462688C07700E3EAB8 /* WebKit.framework in Frameworks */,
+				607DFCA126F5D7930084C6B1 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +129,7 @@
 				BE245146266FBEE00038AD81 /* Main.storyboard */,
 				BE245149266FBEE10038AD81 /* Assets.xcassets */,
 				BE24514B266FBEE10038AD81 /* LaunchScreen.storyboard */,
+				60211C5426EFBA2A000E664C /* InfoPlist.strings */,
 				BE665EE026817723006F4F2C /* Info.plist */,
 			);
 			path = "ios-stations";
@@ -171,6 +177,9 @@
 			dependencies = (
 			);
 			name = "ios-stations";
+			packageProductDependencies = (
+				607DFCA026F5D7930084C6B1 /* Alamofire */,
+			);
 			productName = "ios-stations";
 			productReference = BE24513D266FBEE00038AD81 /* ios-stations.app */;
 			productType = "com.apple.product-type.application";
@@ -243,6 +252,9 @@
 				ja,
 			);
 			mainGroup = BE245134266FBEE00038AD81;
+			packageReferences = (
+				607DFC9F26F5D7930084C6B1 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = BE24513E266FBEE00038AD81 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -260,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE24514D266FBEE10038AD81 /* LaunchScreen.storyboard in Resources */,
+				60211C5226EFBA2A000E664C /* InfoPlist.strings in Resources */,
 				BE24514A266FBEE10038AD81 /* Assets.xcassets in Resources */,
 				BE245148266FBEE00038AD81 /* Main.storyboard in Resources */,
 			);
@@ -329,10 +342,19 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		60211C5426EFBA2A000E664C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				60211C5326EFBA2A000E664C /* ja */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		BE245146266FBEE00038AD81 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BE245147266FBEE00038AD81 /* Base */,
+				606C8FA326F17A5300173686 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -487,7 +509,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.techbowl.ios-stations";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.techbowl.ios-stations-user";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -505,7 +527,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.techbowl.ios-stations";
+				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.techbowl.ios-stations-user";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -632,6 +654,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		607DFC9F26F5D7930084C6B1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = exactVersion;
+				version = 5.4.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		607DFCA026F5D7930084C6B1 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 607DFC9F26F5D7930084C6B1 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BE245135266FBEE00038AD81 /* Project object */;
 }
